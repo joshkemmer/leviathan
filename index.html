@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width" / >
+        <title>LEVIATHAN by Joshua Kemmer</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js" ></script>
+        <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
+    </head>
+    <body>
+        <section id="fmaSection">
+            <div id="fma">
+                <img id="logo" src="images/logo.png"/>
+                <p id="credit">04 / 16</p>
+                <a href="#section1"><img id="arrow" src="images/arrow.svg"/></a>
+                <video id="bgVideo" preload="true" autoplay loop muted>
+                    <source src="images/water.mp4" type="video/mp4" >
+                </video>
+            </div>
+            </section>
+            <img id="transition" src="images/transition.png"/>
+                <div id="navBar">
+                    <div class="container">
+                        <ul id="nav">
+                            <a href="#section1"><li>ABOUT</li></a>
+                            <a href="#section2"><li class="marginLeft30">PREVIEW</li></a>
+                            <a href="#section3"><li class="marginLeft30">RESEARCH</li></a>
+                            <a href="#section4"><li class="marginLeft30">DEVELOPMENT</li></a>
+                            <a href="#section5"><li class="marginLeft30">DOWNLOAD</li></a>
+                        </ul>
+                    </div>
+                </div>
+            <section id="section1">
+                <img id="leviathan" src="images/leviathan.png"/>
+                <div class="container">
+                        <p class="heavyText" id="introP">Leviathan is an ancient sea creature described in the Hebrew Scriptures. The beast is often portrayed with very skinny extremities, a thick body, giant claws and teeth like daggers. Leviathan is a horror to mankind and a wonderous work of Yahweh.<br/><br/>
+                        Influenced heavily by stone-carved lettering and the depiction of the ancient beast, the Leviathan display face draws many of its defining features from the aesthetic created by the chisel. It’s characterized by extreme stroke contrast, angled serifs, “chiseled” terminals, and a focus on all-caps as utilized by Roman Square Capitals.</p>
+                        <img id="letters" src="images/letters.gif"/>
+                </div>
+            </section>
+            <section id="section2">
+                <div id="top" class="rule642"></div>
+                <img id="alphabet" src="images/alphabet.svg"/>
+                <div id="bottom" class="rule642"></div>
+            </section>
+
+            <section id="section3">
+                <img id="tablet" src="images/tablet.jpg"/>
+                <div class="container">
+                    <img id="stonecarving" src="images/stonecarving.png"/>
+                    <div id="titleRule1"></div>
+                    <p class="lightText" id="column1">Stone-carved lettering is the process in which a wide array of letterforms are chiseled into stones of various kinds and sizes in order to create a very permanent product. At its supposed conception, outlines of Roman letterforms were painted onto stones during Roman antiquity and were later carved after revision and realization of the need for permanence.
+                    <br/>
+                    <br/>
+                    Carving stone is one of the oldest art forms of humanity. Since prehistoric times, humans would carve stone representations of the world around them into soft stone with a harder stone. Since then, stone carving was fiercely adopted by the Greeks and ancient Romans, elevating the craft to where humans and artifacts from the world could be represented with impeccable accuracy. Stone carving was used in the creation of monuments, architecture, documents, and fine art.
+                    </p>
+
+                    <img id="types" src="images/types.svg"/>
+
+                    <p class="lightText" id="column2">Stone-carved lettering had many influences on typography, but the largest contribution is the development of serifs and the Roman letter. As the Romans felt the need for a different style of type for inscriptions, they developed Roman Square Capitals. Roman Square Capitals are an all-caps alphabet characterized by rigid geometry, graceful curves, sharp / straight lines and edges, thick and thin contrast in strokes, and usually a somewhat wide proportion to help the letters hold their place. As this alphabet was brushed onto stone and later carved, the artist would follow the flared ends at the end of brush strokes with his chisel, creating the extra ornamentation we now know as “serifs”.
+                    <br/>
+                    <br/>
+                    Stone lettering contributed the foundation for most of the old style, transitional, modern, and slab serif typefaces we have today. It also established the refined, formal aesthetic of letters that we see many modern typefaces strive for. Upon the Roman Square Caps being carved into stone, the letters were much more legible from distances and on big monuments than any other form of letter would have been in their time. Another big contribution to typographic form is the perception of depth within letters. The thick strokes of carved letterforms were usually v-cut, meaning the stoke was left carved out with two planes with the deepest part being in the center (kind of like a valley between two mountains). This 3D, engraved form led to the creations of many typefaces that play on light and depth within the letterforms that would come afterwards such as Chevalier (2000) and PF Monumenta Pro (2006).
+                    </p>
+                </div>
+            </section>
+            <section id="section4">
+                <div class="container">
+                    <img id="development" src="images/development.png"/>
+                    <div id="titleRule2"></div>
+                    <img id="e" src="images/e.gif"/>
+                    <img id="grids" src="images/grids.svg"/>
+                    <p class="lightText" id="devText1">Leviathan was patterned heavily after modern serif typefaces with an emphasis on stroke contrast and stone carving aesthetics. It has a high x-height in relation to other modern typefaces such as Bodoni, and stands strong in titles and larger uses.
+                    </p>
+                    <img id="waterfall" src="images/waterfall.svg"/>
+                </div>
+            </section>
+            <section id="section5">
+                <img id="footer" src="images/footer.jpg"/>
+                <div class="container">
+                    <a id="downloadBtn" href="downloads/Leviathan-Regular.otf" download>DOWNLOAD</a>
+                </div>
+                <p id="endP">JOSHUA KEMMER / 2016</p>
+            </section>
+
+        <script type="text/javascript" src="js/kemmer_behaviors.js"></script>
+        <script>
+
+            $('a').on('click', function(event){
+                event.preventDefault();
+                var destination = $(this).attr('href');
+                $('html, body').stop().animate({
+                scrollTop: $(destination).offset().top-(60)
+                }, 1200,'easeInOutExpo');
+            });
+
+        </script>
+    </body>
+</html>
